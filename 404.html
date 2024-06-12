@@ -21,6 +21,7 @@ var path_name = window.location.pathname;
 // クエリストリング付きのURLに変換してリダイレクト
 var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
   console.log(match_condition);
+  console.log(path_name.match(match_condition))
 if (permalink = path_name.match(match_condition))
 {
   location.href = path_name.replace(permalink, '') + redirect_file_name ;
