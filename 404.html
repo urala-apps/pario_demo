@@ -26,7 +26,7 @@
    * Process
    * (Redirect)
    */
-  var match_condition = new RegExp(redirect_file_name.replace('.html', '') + '/[a-z0-9-_]+$');
+  var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
   if (permalink = path_name.match(match_condition))
   {
     location.href = path_name + ".png";
