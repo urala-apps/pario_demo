@@ -24,7 +24,7 @@ var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z
   console.log(path_name.match(match_condition))
 if (permalink = path_name.match(match_condition))
 {
-  location.href = path_name.replace(permalink, '') + redirect_file_name ;
+  location.href = path_name.replace(permalink, '') + redirect_file_name  + '?' + parameter_key + '=' + permalink[0].replace(/post\//, '');
 }
 
   
