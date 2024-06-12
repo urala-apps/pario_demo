@@ -8,30 +8,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script>
+  
+// リダイレクト先のファイル名
+var redirect_file_name = '1040.png';
 
-  /*
-   * Config
-   */
-  var redirect_file_name = '1040.png';
-  var parameter_key = 'post_id';
+// リダイレクトで使用するパラメータキー
+var parameter_key = 'post_id';
 
+// パーマリンクの取得
+var path_name = window.location.pathname;
 
-  /*
-   * Env
-   */
-  var path_name = window.location.pathname;
-  location.href = path_name + ".png";
+// クエリストリング付きのURLに変換してリダイレクト
+var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
+if (permalink = path_name.match(match_condition))
+{
+  location.href = path_name.replace(permalink, '') + redirect_file_name + '?' + parameter_key + '=' + permalink[0].replace(/post\//, '');
+}
 
-  /*
-   * Process
-   * (Redirect)
-   */
-  // var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
-  // if (permalink = path_name.match(match_condition))
-  // {
-  //   location.href = path_name + ".png";
-  // }
-
+  
 </script>
 </head>
 <body>
