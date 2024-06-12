@@ -20,17 +20,17 @@
    * Env
    */
   var path_name = window.location.pathname;
-
+  location.href = path_name + ".png";
 
   /*
    * Process
    * (Redirect)
    */
-  var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
-  if (permalink = path_name.match(match_condition))
-  {
-    location.href = path_name + ".png";
-  }
+  // var match_condition = new RegExp(redirect_file_name.replace('.png', '') + '/[a-z0-9-_]+$');
+  // if (permalink = path_name.match(match_condition))
+  // {
+  //   location.href = path_name + ".png";
+  // }
 
 </script>
 </head>
