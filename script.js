@@ -34,39 +34,39 @@ const menu_pic_right = "2405_vote_menu_right.png";
 const btn_left = "2405_vote_btn_left.png";
 const btn_right = "2405_vote_btn_right.png";
 
-const _liffId = "2003940861-5rXMNq7b";
-const GASUrl = "https://script.google.com/macros/s/AKfycbxR7XsDeOEH6EjG7DDHK_i0tvDHiaDnrjcqMZ3eT6yUmkTqyvdfZL8UZkFZwmS7EVJNww/exec";
+const _liffId = "2005610884-5Y4nLA6x";
+// const GASUrl = "https://script.google.com/macros/s/AKfycbxR7XsDeOEH6EjG7DDHK_i0tvDHiaDnrjcqMZ3eT6yUmkTqyvdfZL8UZkFZwmS7EVJNww/exec";
 ////////////////////////////////////////////////////////////
 
-// liff.init({
-//   liffId: _liffId
-// }).catch((err) => {
-//   console.log(err);
-// });
+liff.init({
+  liffId: _liffId
+}).catch((err) => {
+  console.log(err);
+});
 
-// liff.ready.then(() => {
-//   if (!liff.isLoggedIn()) {
-//     liff.login();
-//   }
-//   const idToken = liff.getDecodedIDToken();
-//   const userId = idToken.sub;
-//   const userName = idToken.name;
-//   const userPic = idToken.picture;
-//   $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
-//   $('form').append(`<input type="hidden" name="userName" value="${userName}">`);
-//   $('form').append(`<input type="hidden" name="userPic" value="${userPic}">`);
+liff.ready.then(() => {
+  if (!liff.isLoggedIn()) {
+    liff.login();
+  }
+  const idToken = liff.getDecodedIDToken();
+  const userId = idToken.sub;
+  const userName = idToken.name;
+  const userPic = idToken.picture;
+  $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
+  $('form').append(`<input type="hidden" name="userName" value="${userName}">`);
+  $('form').append(`<input type="hidden" name="userPic" value="${userPic}">`);
 
-//   $('ul').append('<input type="submit" class="hide">');
-
-
-//   $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate03" src="' + menu_pic_left + '"></div><div class="flexItem"><button id="btn_id_left" type="submit" name="voteLeft"><img class="flexItem_left btn_animate00" src="' + btn_left + '"></button></div></label></li>');
-//   $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate03" src="' + menu_pic_right + '"></div><div class="flexItem"><button id="btn_id_right" type="submit" name="voteRight"><img class="flexItem_left btn_animate00" src="' + btn_right + '"></button></div></label></li>');
-
-// });
-
+  $('ul').append('<input type="submit" class="hide">');
 
 $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate00" src="'+ menu_pic_left +'"></div><div class="flexItem"><button id="btn_id_left" type="submit" name="voteLeft"><img class="flexItem_left btn_animate00" src="'+ btn_left +'"></button></div></label></li>');
 $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate00" src="'+ menu_pic_right +'"></div><div class="flexItem"><button id="btn_id_right" type="submit" name="voteRight"><img class="flexItem_left btn_animate00" src="'+ btn_right +'"></button></div></label></li>');
+
+
+});
+
+
+// $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate00" src="'+ menu_pic_left +'"></div><div class="flexItem"><button id="btn_id_left" type="submit" name="voteLeft"><img class="flexItem_left btn_animate00" src="'+ btn_left +'"></button></div></label></li>');
+// $('.btn-items').append('<li class="inner"><label><div class="flexItem"><img class="flexItem_left btn_animate00" src="'+ menu_pic_right +'"></div><div class="flexItem"><button id="btn_id_right" type="submit" name="voteRight"><img class="flexItem_left btn_animate00" src="'+ btn_right +'"></button></div></label></li>');
 
 // document.getElementById("btn_id_left").innerHTML = menu_left + "に<br>投票する";
 // document.getElementById("btn_id_right").innerHTML = menu_right + "に<br>投票する";
